@@ -77,5 +77,7 @@ function playRound(){
         playerScore++;
     }
 
-    console.log(`Player score: ${playerScore} | Computer Score: ${computerScore}`);
-}
+      return console.log(`Player score: ${playerScore} | Computer Score: ${computerScore}`);
+  }
+    
+
