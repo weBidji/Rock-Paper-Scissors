@@ -28,10 +28,12 @@ function playerSelection(){
 
 function computerSelection(){
 
+
     let randomNumber = Math.floor(Math.random()*3);
     
 
  switch(randomNumber){
+
     case 0:
       computerChoice = 'rock';
       
@@ -63,18 +65,17 @@ function playRound(){
     if (playerChoice === computerChoice) {
  
         console.log ("It's a tie!")
-    } else if ((computerSelection === 'rock' && playerSelection === 'scissors') || (computerSelection === 'scissors' && playerSelection === 'paper') || (computerSelection === 'paper' && playerSelection === 'rock')){
-        console.log('Computer wins the round!');
-        // computerScore++;
-        // console.log(computerScore);
+
+    } else if ((computerChoice === 'rock' && playerChoice === 'scissors') || (computerChoice=== 'scissors' && playerChoice=== 'paper') || (computerChoice === 'paper' && playerChoice === 'rock')){
+        
+      console.log('Computer wins the round!');
+        computerScore++;
+
     } else {
+
         console.log('You win the round!');
-        // playerScore++;
-        // console.log(playerScore);
+        playerScore++;
     }
 
-    // console.log(`Player score: ${playerScore} | Computer Score: ${computerScore}`);
+    console.log(`Player score: ${playerScore} | Computer Score: ${computerScore}`);
 }
-
-
-// then increase scores accordingly
