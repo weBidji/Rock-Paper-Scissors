@@ -149,18 +149,22 @@ h2 {
     color: #469e88;
 }
 
-#play-btn {
-    border: 3px solid red;
-    background-color: brown;
-    opacity: 0.6;
+#replay-btn {
+    /* border: 3px solid red; */
+    /* background-color: rgba(165, 42, 42, 0.767); */
+    background-color:#469e88;
+    
     font-size: 2rem;
     padding: 0.6em 1.3em;
     font-family: 'Anta', sans-serif;
     border-radius: 12px;
     display: none;
+    /* color:#a71515; */
+    
 }
 
-#play-btn:hover {
-    background-color: brown;
-    opacity: 1;
+#replay-btn:hover {
+    background-color: #469e88;
+    color:#a71515;
+    cursor:pointer;
 }

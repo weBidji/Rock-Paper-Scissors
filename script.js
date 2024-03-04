@@ -6,10 +6,12 @@ let loser;
 let playerScoreCount = 0;
 let computerScoreCount = 0;
 let isRoundPlaying = false;
+let gameOver = false;
 const playerScore = document.getElementById('player-score');
 const computerScore = document.getElementById('cpu-score');
 playerScore.innerText = ` ${playerScoreCount}`;
 computerScore.innerText = ` ${computerScoreCount}`;
+let replayBtn = document.getElementById('replay-btn')
 
 
 const rock = document.getElementById('rock');
@@ -37,7 +39,7 @@ playerPicks.forEach((pick) => {
     if (!isRoundPlaying) {
       pick.classList.add('player-selected');
       playerSelected = document.querySelector('.player-selected');
-      console.log(playerSelected);
+     
 
       switch (pick.id) {
         case 'rock':
@@ -70,13 +72,12 @@ function playRound() {
 
   computerSelection();
 
-  console.log('you: ' + playerChoice);
-  console.log('cpu: ' + computerChoice);
+ 
 
   if (playerChoice === computerChoice) {
 
     gameInfo.innerText = "It's a tie!"
-    console.log('tie');
+   
     computerSelected.style.borderRight = '20px solid yellow';
     computerSelected.style.borderRadius = '100px';
     playerSelected.style.borderLeft = '20px solid yellow';
@@ -115,11 +116,29 @@ function playRound() {
 
   checkForWin();
 
-  setTimeout(resetBoard, 1500);
+  if (!gameOver){
+    setTimeout(resetBoard, 1500);}
+    else {
+      
+      replayBtn.style.display = 'block';
+      replayBtn.addEventListener('click', resetGame)
+    }
 
-
+  
 }
 
+function resetGame() {
+
+  resetBoard();
+  playerScoreCount = 0;
+  computerScoreCount = 0;
+
+  replayBtn.style.display = 'none';
+  gameOver = false;
+
+  updateScores();
+
+}
 
 
 
@@ -164,10 +183,12 @@ function updateScores() {
 
 function checkForWin() {
 
-  if (playerScore === 3) {
-    gameInfo.innerText = "You win!"
-  } else if (computerScore === 3) {
-    gameInfo.innerText = "Computer wins!"
+  if (playerScoreCount === 3) {
+    gameInfo.innerText = "You win the game!"
+    gameOver = true;
+  } else if (computerScoreCount === 3) {
+    gameInfo.innerText = "You lost the game!"
+    gameOver = true;
   } else {
     return;
   }
