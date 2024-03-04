@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
     <title>Rock - Paper - Scissors</title>
 </head>
+
 <body>
 
-    <h1>Rock  Paper  Scissors</h1>
-<div class="game-box container row">
+    <h1>Rock Paper Scissors</h1>
+    <div class="game-box container row">
 
-    <div class="player-side side column">
+        <div class="player-side side column">
 
-        <h2>You</h2>
+            <!-- <h2>You</h2> -->
 
-        <div class="player-options">
-            <div class="player-img" id="rock"><img src="images/rock.png" alt=""></div>
-            <div  class="player-img" id="paper"><img src="images/paper.png" alt=""></div>
-            <div  class="player-img" id="scissors"><img src="images/scissors.png" alt=""></div>
-            <div class="player-pick hide"></div>
+            <div class="player-options">
+                <div class="player-img" id="rock"><img src="images/rock.png" alt=""></div>
+                <div class="player-img" id="paper"><img src="images/paper.png" alt=""></div>
+                <div class="player-img" id="scissors"><img src="images/scissors.png" alt=""></div>
+                <div class="player-pick hide"></div>
+            </div>
+
+            <div class="score">Your Score:<span id="player-score"></span></div>
+
         </div>
 
-        <div class="score">Your Score:<span id="player-score"></span></div>
+        <div class="neutral side">
+            <p id="game-info"></p>
+        </div>
+
+        <div class="computer-side side column">
+
+            <!-- <h2>Computer</h2> -->
+
+            <div class="cpu-img" id="cpu-rock"><img src="images/rock-flip.png" alt=""></div>
+            <div class="cpu-img" id="cpu-paper"><img src="images/paper-flip.png" alt=""></div>
+            <div class="cpu-img" id="cpu-scissors"><img src="images/scissors-flip.png" alt=""></div>
+
+            <!-- <div class="computer-pick"><img src="images/rock-flip.png" id="computer-pick"></div> -->
+
+            <div class="computer-score score">CPU Score:<span id="cpu-score"></div>
+
+        </div>
+
+
 
     </div>
-
-    <div class="neutral side">
-        <p id="game-info"></p>
-    </div>
-
-    <div class="computer-side side column">
-
-        <h2>Computer</h2>
-
-        <div class="cpu-img" id="cpu-rock"><img src="images/rock-flip.png" alt=""></div>
-            <div  class="cpu-img" id="cpu-paper"><img src="images/paper-flip.png" alt=""></div>
-            <div  class="cpu-img" id="cpu-scissors"><img src="images/scissors-flip.png" alt=""></div>
-
-        <!-- <div class="computer-pick"><img src="images/rock-flip.png" id="computer-pick"></div> -->
-
-        <div class="computer-score score">CPU Score:<span id="cpu-score"></div>
-
-    </div>
+    <div id="play-btn">Replay</div>
 
 
 
-</div>
-<div id="play-btn">Replay</div>
-
-
-    
 
     <script src="script.js"></script>
 </body>
+
 </html>

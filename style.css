@@ -1,156 +1,165 @@
-
 *,
 *::before,
-*::after{
+*::after {
 
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-
-}
-body{
- /* background-color:#222c2a; */
- background-color:#b6d8d0;
- display:flex;
- flex-direction:column;
- align-items:center;
- justify-content:space-evenly;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
 }
-.hide{
-    display:none;
-}
-img{
-    height:200px;
-    max-width:100%;
+
+body {
+    background-color: #b6d8d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
 }
 
-.colorbank{
-    color:blue;
+.hide {
+    display: none;
+}
+
+img {
+    height: 200px;
+    max-width: 100%;
+}
+
+.colorbank {
+    color: blue;
     /* color:#b6d8d0 very light blue; */
     /* color:#469e88;  medium blue*/
 }
 
-.container{
-    display:flex;
-    justify-content:space-between;
-}
-.row{
-    flex-direction:row;
-}
-.column{
-    flex-direction:column;
+.container {
+    display: flex;
+    justify-content: space-between;
 }
 
-h1{
-    margin:2rem;
-    color:#222C2a;
-    text-align:center;
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+h1 {
+    margin: 2rem;
+    color: #222C2a;
+    text-align: center;
     /* color:#469e88; */
-    font-family:'Anta', sans-serif;
-    font-size:3.5rem;
+    font-family: 'Anta', sans-serif;
+    font-size: 3.5rem;
+    border-left: 15px solid #222C2a;
+    border-right: 15px solid #222C2a;
+    border-radius: 100px;
+    padding: 0 2rem;
+
 
 }
 
-h2{
+h2 {
     text-decoration: underline;
-    font-size:2.5rem;
-    margin-bottom:0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+
 }
 
-.game-box{
-    /* border:5px solid red; */
-    justify-content:space-between;
-}
-.side{
-    display:flex;
-    /* border:3px solid black; */
+.game-box {
 
-    width:300px;
-   
-    text-align:center;
-    font-family:'Anta', sans-serif;
-    color:#469e88;
-    justify-content:space-between;
-    
-    /* color:#b6d8d0; */
+    justify-content: space-between;
 }
 
-.neutral{
-    justify-content:center;
+.side {
+    display: flex;
+
+
+    width: 300px;
+
+    text-align: center;
+    font-family: 'Anta', sans-serif;
+    color: #469e88;
+    justify-content: space-between;
+
+    color: #b6d8d0;
+}
+
+.neutral {
+    justify-content: center;
     align-items: center;
 }
 
-#game-info{
-    font-size:3rem;
-    color:#a71515
+#game-info {
+    font-size: 3rem;
+    color: #a71515
 }
 
-.player-img{
-    transition:transform 0.2s ease-in-out;
+.player-img {
+    transition: transform 0.2s ease-in-out;
     /* border:2px solid blue; */
 
-    
+
 }
-.cpu-img{
-    transition:transform 0.3s ease-in-out;
+
+.cpu-img {
+    transition: transform 0.3s ease-in-out;
     /* border:3px solid red; */
-    
-}
-
-.cpu-selected{
-    transform:translateX(-60px);
-}
-.player-img:hover{
-    cursor:pointer;
-    border-left: 8px solid yellow;
-    border-radius:-8px;
-    transform:scale3d(1.5);
-    
 
 }
-.player-selected{
-    transform:translateX(60px);
+
+.cpu-selected {
+    transform: translateX(-60px);
 }
 
-#computer-pick{
-    transform:translateX(-40px);
-    border:5px solid red;
-    
-}
+.player-img:hover {
+    cursor: pointer;
+    border-left: 20px solid yellow;
+    border-radius: 100px;
+    transform: scale3d(1.5);
 
-#player-score, #cpu-score{
-    color:#a71515;
-   
-}
 
-.score{
-    margin-top:0.5rem;
-    font-size:2rem;
 }
 
 
-.winning-pick{
-    border:5px solid green;
-    border-radius:20px;
+
+.player-selected {
+    transform: translateX(60px);
+    border-radius: 100px;
 }
 
-.losing-pick{
-    border:5px solid red;
-    border-radius:20px;
+.computer-selected {
+    transform: translateX(-40px);
+    border-radius: 100px;
+
+
 }
 
-#play-btn{
-    border:3px solid red;
-    background-color:brown;
-    opacity:0.6;
-    font-size:2rem;
-    padding:0.6em 1.3em;
-    font-family:'Anta', sans-serif;
-    border-radius:12px;
-    display:none;
+#player-score,
+#cpu-score {
+    color: #a71515;
+
 }
-#play-btn:hover{
-    background-color:brown;
-    opacity:1;
+
+.score {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    color: #469e88;
+}
+
+#play-btn {
+    border: 3px solid red;
+    background-color: brown;
+    opacity: 0.6;
+    font-size: 2rem;
+    padding: 0.6em 1.3em;
+    font-family: 'Anta', sans-serif;
+    border-radius: 12px;
+    display: none;
+}
+
+#play-btn:hover {
+    background-color: brown;
+    opacity: 1;
 }

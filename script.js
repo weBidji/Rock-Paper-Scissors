@@ -66,6 +66,10 @@ switch (pick.id){
 
 function playRound(){
 
+  playerPicks.forEach((pick) => {
+    pick.classList.add('disabled-hover');
+  });
+
     computerSelection();
     
   console.log('you: ' + playerChoice);
@@ -75,7 +79,8 @@ function playRound(){
    
           gameInfo.innerText = "It's a tie!"
           console.log('tie');
-          computerSelected.style.borderRight = '8px solid yellow'
+          computerSelected.style.borderRight = '20px solid yellow';
+          computerSelected.style.borderRadius = '100px';
   
       } else if ((computerChoice === 'rock' && playerChoice === 'scissors') || (computerChoice=== 'scissors' && playerChoice=== 'paper') || (computerChoice === 'paper' && playerChoice === 'rock')){
           
@@ -90,8 +95,9 @@ function playRound(){
           winner = computerChoice;
           loser = playerChoice;
 
-          playerSelected.style.borderLeft = '8px solid red';
-          computerSelected.style.borderRight = '8px solid green'
+          playerSelected.style.borderLeft = '20px solid red';
+          computerSelected.style.borderRight = '20px solid green'
+          computerSelected.style.borderRadius = '100px';
   
       } else {
        
@@ -105,8 +111,9 @@ function playRound(){
           winner = playerChoice;
           loser = computerChoice;
 
-          playerSelected.style.borderLeft = '8px solid green';
-          computerSelected.style.borderRight = '8px solid red'
+          playerSelected.style.borderLeft = '20px solid green';
+          computerSelected.style.borderRight = '20px solid red'
+          computerSelected.style.borderRadius = '100px';
       }
 
      
@@ -190,86 +197,9 @@ function resetBoard(){
 
 }
 
+function disableClick(event) {
+  event.preventDefault();
+}
 
 
-// let playerScore = 0;
-// let computerScore = 0;
-// let playerChoice;
-// let computerChoice;
-
-// function playerSelection(){
-
-//   playerChoice = prompt('Rock, paper or scissors?');
-//   playerChoice = playerChoice.toLowerCase();
-
-//   if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors'){
-    
-//     console.log(`You picked ${playerChoice}.`)
-
-//   return playerChoice;
-  
-
-//   } else {
-//     alert('Please enter a valid selection.');
-    
-//   }
-// }
-
-
-// //computer selection function
-
-// function computerSelection(){
-
-
-//     let randomNumber = Math.floor(Math.random()*3);
-    
-
-//  switch(randomNumber){
-
-//     case 0:
-//       computerChoice = 'rock';
-      
-//       break;
-
-//     case 1:
-//       computerChoice = 'paper';
-      
-//       break;
-
-//     case 2:
-//       computerChoice = 'scissors'
-      
-//   }
-//   console.log(`Your opponent picked ${computerChoice}.`)
-  
-//   }
-
-
-// // the round must be played, comparing selections, then increase scores accordingly
-
-// function playRound(){
-
-//   playerSelection();
-//   computerSelection();
-
-
-    
-//     if (playerChoice === computerChoice) {
- 
-//         console.log ("It's a tie!")
-
-//     } else if ((computerChoice === 'rock' && playerChoice === 'scissors') || (computerChoice=== 'scissors' && playerChoice=== 'paper') || (computerChoice === 'paper' && playerChoice === 'rock')){
-        
-//       console.log('Computer wins the round!');
-//         computerScore++;
-
-//     } else {
-
-//         console.log('You win the round!');
-//         playerScore++;
-//     }
-
-//       return console.log(`Player score: ${playerScore} | Computer Score: ${computerScore}`);
-//   }
-    
 
