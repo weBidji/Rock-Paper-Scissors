@@ -81,6 +81,8 @@ function playRound(){
           console.log('tie');
           computerSelected.style.borderRight = '20px solid yellow';
           computerSelected.style.borderRadius = '100px';
+          playerSelected.style.borderLeft = '20px solid yellow';
+          playerSelected.style.borderRadius = '100px';
   
       } else if ((computerChoice === 'rock' && playerChoice === 'scissors') || (computerChoice=== 'scissors' && playerChoice=== 'paper') || (computerChoice === 'paper' && playerChoice === 'rock')){
           
@@ -184,6 +186,9 @@ function resetBoard(){
 
   playerPicks.forEach((pick) => {
     pick.classList.remove('player-selected')
+
+    pick.classList.remove('disabled-hover');
+  
   })
 
   cpuPicks.forEach((pick) => {
