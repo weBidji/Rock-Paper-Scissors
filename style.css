@@ -26,6 +26,7 @@ img{
 }
 
 .colorbank{
+    color:blue;
     /* color:#b6d8d0 very light blue; */
     /* color:#469e88;  medium blue*/
 }
@@ -44,6 +45,7 @@ img{
 h1{
     margin:2rem;
     color:#222C2a;
+    text-align:center;
     /* color:#469e88; */
     font-family:'Anta', sans-serif;
     font-size:3.5rem;
@@ -53,6 +55,7 @@ h1{
 h2{
     text-decoration: underline;
     font-size:2.5rem;
+    margin-bottom:0.5rem;
 }
 
 .game-box{
@@ -73,15 +76,68 @@ h2{
     /* color:#b6d8d0; */
 }
 
+.neutral{
+    justify-content:center;
+    align-items: center;
+}
+
+#game-info{
+    font-size:3rem;
+    color:#a71515
+}
+
 .player-img{
     transition:transform 0.2s ease-in-out;
+    /* border:2px solid blue; */
+
+    
+}
+.cpu-img{
+    transition:transform 0.3s ease-in-out;
+    /* border:3px solid red; */
+    
+}
+
+.cpu-selected{
+    transform:translateX(-60px);
 }
 .player-img:hover{
     cursor:pointer;
-    transform:translateX(25px);
-    transition:transform 0.3s ease-in-out;
+    border-left: 8px solid yellow;
+    border-radius:-8px;
+    transform:scale3d(1.5);
+    
+
+}
+.player-selected{
+    transform:translateX(60px);
+}
+
+#computer-pick{
+    transform:translateX(-40px);
+    border:5px solid red;
+    
+}
+
+#player-score, #cpu-score{
+    color:#a71515;
+   
+}
+
+.score{
+    margin-top:0.5rem;
+    font-size:2rem;
+}
 
 
+.winning-pick{
+    border:5px solid green;
+    border-radius:20px;
+}
+
+.losing-pick{
+    border:5px solid red;
+    border-radius:20px;
 }
 
 #play-btn{
@@ -92,6 +148,7 @@ h2{
     padding:0.6em 1.3em;
     font-family:'Anta', sans-serif;
     border-radius:12px;
+    display:none;
 }
 #play-btn:hover{
     background-color:brown;
