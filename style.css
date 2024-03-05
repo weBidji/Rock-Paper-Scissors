@@ -26,12 +26,6 @@ img {
     max-width: 100%;
 }
 
-.colorbank {
-    color: blue;
-    /* color:#b6d8d0 very light blue; */
-    /* color:#469e88;  medium blue*/
-}
-
 .container {
     display: flex;
     justify-content: space-between;

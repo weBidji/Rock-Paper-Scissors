@@ -1,4 +1,6 @@
 
+// Variables declaration
+
 let playerChoice;
 let computerChoice;
 let winner;
@@ -28,11 +30,11 @@ let playerSelected;
 
 let computerSelected;
 
-;
-
-
 let playerPicks = [rock, paper, scissors];
 let cpuPicks = [cpuRock, cpuPaper, cpuScissors];
+
+
+// Player pick triggering game logic
 
 playerPicks.forEach((pick) => {
   pick.addEventListener('click', (event) => {
@@ -62,17 +64,23 @@ playerPicks.forEach((pick) => {
   });
 });
 
+// Game logic, all functions used here displayed below in order
+
+
 function playRound() {
 
   isRoundPlaying = true;
+ 
+  // Disable user interaction during the round
 
   playerPicks.forEach((pick) => {
     pick.classList.add('disabled-hover');
   });
 
+
   computerSelection();
 
- 
+ // win/lose/tie logic
 
   if (playerChoice === computerChoice) {
 
@@ -116,6 +124,8 @@ function playRound() {
 
   checkForWin();
 
+  //Auto board reset for subsequent round / trigger game over if any side reaches 3 points
+
   if (!gameOver){
     setTimeout(resetBoard, 1500);}
     else {
@@ -127,20 +137,7 @@ function playRound() {
   
 }
 
-function resetGame() {
-
-  resetBoard();
-  playerScoreCount = 0;
-  computerScoreCount = 0;
-
-  replayBtn.style.display = 'none';
-  gameOver = false;
-
-  updateScores();
-
-}
-
-
+//Computer Selection
 
 function computerSelection() {
 
@@ -176,10 +173,15 @@ function computerSelection() {
 
 }
 
+//Score Update
+
+
 function updateScores() {
   playerScore.innerText = ` ${playerScoreCount}`;
   computerScore.innerText = ` ${computerScoreCount}`;
 }
+
+//Winning Logic
 
 function checkForWin() {
 
@@ -215,6 +217,29 @@ function resetBoard() {
   isRoundPlaying = false;
 
 }
+
+function resetGame() {
+
+  resetBoard();
+  playerScoreCount = 0;
+  computerScoreCount = 0;
+
+  replayBtn.style.display = 'none';
+  gameOver = false;
+
+  updateScores();
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
