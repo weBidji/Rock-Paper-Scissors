@@ -41,7 +41,7 @@ playerPicks.forEach((pick) => {
     if (!isRoundPlaying) {
       pick.classList.add('player-selected');
       playerSelected = document.querySelector('.player-selected');
-     
+
 
       switch (pick.id) {
         case 'rock':
@@ -70,7 +70,7 @@ playerPicks.forEach((pick) => {
 function playRound() {
 
   isRoundPlaying = true;
- 
+
   // Disable user interaction during the round
 
   playerPicks.forEach((pick) => {
@@ -80,12 +80,12 @@ function playRound() {
 
   computerSelection();
 
- // win/lose/tie logic
+  // win/lose/tie logic
 
   if (playerChoice === computerChoice) {
 
     gameInfo.innerText = "It's a tie!"
-   
+
     computerSelected.style.borderRight = '20px solid yellow';
     computerSelected.style.borderRadius = '100px';
     playerSelected.style.borderLeft = '20px solid yellow';
@@ -124,17 +124,18 @@ function playRound() {
 
   checkForWin();
 
-  //Auto board reset for subsequent round / trigger game over if any side reaches 3 points
+  // Auto board reset for subsequent round / trigger game over if any side reaches 3 points
 
-  if (!gameOver){
-    setTimeout(resetBoard, 1500);}
-    else {
-      
-      replayBtn.style.display = 'block';
-      replayBtn.addEventListener('click', resetGame)
-    }
+  if (!gameOver) {
+    setTimeout(resetBoard, 1500);
+  }
+  else {
 
-  
+    replayBtn.style.display = 'block';
+    replayBtn.addEventListener('click', resetGame)
+  }
+
+
 }
 
 //Computer Selection

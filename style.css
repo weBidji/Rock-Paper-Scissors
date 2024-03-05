@@ -1,3 +1,5 @@
+/* General properties  */
+
 *,
 *::before,
 *::after {
@@ -24,7 +26,10 @@ body {
 img {
     height: 200px;
     max-width: 100%;
+    width: auto;
 }
+
+
 
 .container {
     display: flex;
@@ -43,7 +48,6 @@ h1 {
     margin: 2rem;
     color: #222C2a;
     text-align: center;
-    /* color:#469e88; */
     font-family: 'Anta', sans-serif;
     font-size: 3.5rem;
     border-left: 15px solid #222C2a;
@@ -61,9 +65,12 @@ h2 {
 
 }
 
+/* Everything within box */
+
 .game-box {
 
     justify-content: space-between;
+
 }
 
 .side {
@@ -86,20 +93,23 @@ h2 {
 }
 
 #game-info {
+
     font-size: 3rem;
     color: #a71515
 }
 
+/* Properties applied during round play  */
+
 .player-img {
+
     transition: transform 0.2s ease-in-out;
-    /* border:2px solid blue; */
 
 
 }
 
 .cpu-img {
     transition: transform 0.3s ease-in-out;
-    /* border:3px solid red; */
+
 
 }
 
@@ -113,8 +123,8 @@ h2 {
     border-radius: 100px;
 }
 
-.disabled-hover:hover{
-    border:none;
+.disabled-hover:hover {
+    border: none;
 }
 
 
@@ -131,6 +141,8 @@ h2 {
 
 }
 
+/* Score-related  */
+
 #player-score,
 #cpu-score {
     color: #a71515;
@@ -143,22 +155,159 @@ h2 {
     color: #469e88;
 }
 
+/* Replay button */
+
 #replay-btn {
-    /* border: 3px solid red; */
-    /* background-color: rgba(165, 42, 42, 0.767); */
-    background-color:#469e88;
-    
+
+    background-color: #469e88;
+
     font-size: 2rem;
     padding: 0.6em 1.3em;
     font-family: 'Anta', sans-serif;
     border-radius: 12px;
     display: none;
-    /* color:#a71515; */
-    
+
+
 }
 
 #replay-btn:hover {
     background-color: #469e88;
-    color:#a71515;
-    cursor:pointer;
+    color: #a71515;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+
+
+    #game-box {
+
+        width: 80%;
+    }
+
+    img{
+        height:100%;
+    }
+
+    .player-img, .cpu-img {
+        height: 150px;
+        /* border: 3px solid blue */
+    }
+
+    #game-info {
+        font-size: 2.5rem;
+    }
+
+    /* .neutral{
+        width:300px;
+    } */
+
+
+    .side {
+
+        width: 250px;
+
+    }
+
+
+    .player-side {
+        /* margin-left:4rem; */
+    }
+
+    .computer-side {
+
+        /* margin-right:4rem; */
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+
+
+    h1{
+        width:60%;
+        font-size:3rem;
+    }
+    #game-box {
+
+        width: 80%;
+        
+    }
+
+    .player-img, .cpu-img {
+        height: 100px;
+        /* border: 3px solid blue */
+    }
+
+   
+
+    #game-info {
+        font-size: 2.5rem;
+    }
+
+   
+    .side {
+
+        width: 250px;
+
+    }
+
+    .neutral{
+        width:100px;
+    }
+
+    .score{
+        font-size:1.5rem;
+        margin-top:2rem;
+    }
+
+    #replay-btn {
+
+        
+    
+        font-size: 1.4rem;
+        padding: 0.6em 1.3em;
+        font-family: 'Anta', sans-serif;
+        border-radius: 12px;
+        display: none;
+        margin-top:2rem;
+    
+    
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+
+    h1{
+        width:60%;
+        font-size:2.2rem;
+    
+    }
+
+    .side::not(.neutral){
+        width:150px;
+    }
+
+  
+    .player-img, .cpu-img {
+        width:100%;
+        
+    } 
+
+    .neutral{
+        width:60px;
+    }
+
+    #game-info {
+        font-size: 1.5rem;
+
+    }
+
+    @media screen and (max-width: 800px) {
+
+        
+    }
+
+
+
 }
