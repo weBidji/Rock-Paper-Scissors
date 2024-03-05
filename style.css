@@ -284,15 +284,19 @@ h2 {
     
     }
 
-    .side::not(.neutral){
-        width:150px;
-    }
 
   
     .player-img, .cpu-img {
         width:100%;
         
     } 
+
+
+    .side {
+
+        width: 250px;
+
+    }
 
     .neutral{
         width:60px;
@@ -302,10 +306,35 @@ h2 {
         font-size: 1.5rem;
 
     }
+}
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 650px) {
 
-        
+        .player-img, .cpu-img {
+            /* width:90px; */
+            
+        } 
+
+        .side {
+
+            width: 180px;
+    
+        }
+        .neutral{
+            width:60px;
+            margin:0 2rem;
+        }
+    
+        /* .neutral{
+            width:90px;
+        }
+     */
+        #game-info {
+            font-size: 1.5rem;
+            transform:translateY(-60px);
+    
+
+
     }
 
 
