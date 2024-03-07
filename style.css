@@ -1,4 +1,4 @@
-/* General properties  */
+/***** General properties  ******/
 
 *,
 *::before,
@@ -44,6 +44,8 @@ img {
     flex-direction: column;
 }
 
+/***** Headers *****/
+
 h1 {
     margin: 2rem;
     color: #222C2a;
@@ -65,7 +67,7 @@ h2 {
 
 }
 
-/* Everything within box */
+/***** Everything within box *****/
 
 .game-box {
 
@@ -98,7 +100,7 @@ h2 {
     color: #a71515
 }
 
-/* Properties applied during round play  */
+/***** Properties applied during round play  *****/
 
 .player-img {
 
@@ -141,7 +143,7 @@ h2 {
 
 }
 
-/* Score-related  */
+/***** Score-related  *****/
 
 #player-score,
 #cpu-score {
@@ -155,7 +157,7 @@ h2 {
     color: #469e88;
 }
 
-/* Replay button */
+/***** Replay button *****/
 
 #replay-btn {
 
@@ -175,6 +177,10 @@ h2 {
     color: #a71515;
     cursor: pointer;
 }
+
+
+/***** Media Queries  *****/
+
 
 @media screen and (max-width: 950px) {
 
@@ -197,26 +203,12 @@ h2 {
         font-size: 2.5rem;
     }
 
-    /* .neutral{
-        width:300px;
-    } */
-
-
     .side {
 
         width: 250px;
 
     }
 
-
-    .player-side {
-        /* margin-left:4rem; */
-    }
-
-    .computer-side {
-
-        /* margin-right:4rem; */
-    }
 }
 
 @media screen and (max-width: 800px) {
@@ -310,11 +302,7 @@ h2 {
 
     @media screen and (max-width: 650px) {
 
-        .player-img, .cpu-img {
-            /* width:90px; */
-            
-        } 
-
+    
         .side {
 
             width: 180px;
@@ -325,18 +313,79 @@ h2 {
             margin:0 2rem;
         }
     
-        /* .neutral{
-            width:90px;
-        }
-     */
+       
         #game-info {
             font-size: 1.5rem;
             transform:translateY(-60px);
-    
 
 
     }
 
 
+    @media screen and (max-width: 500px) {
 
-}
+
+        h1{
+            font-size:1.8rem;
+        }
+        .side {
+
+            width: 130px;
+            /* border:1px solid red */
+    
+        }
+        .neutral{
+            width:60px;
+            margin:0 3rem;
+            /* border:3px solid blue; */
+        }
+    
+       
+        #game-info {
+            font-size: 1.5rem;
+            transform:translateY(120px);
+
+
+    }
+    }
+
+    @media screen and (max-width: 430px) {
+
+
+        h1{
+            font-size:1.8rem;
+        }
+        
+        .neutral{
+            width:80px;
+            margin: 0 0; 
+
+    }
+
+    #game-info{
+        font-size: 1.2rem;
+        transform:translateY(110px);
+    }
+
+
+    .player-selected {
+        transform: translateX(40px);
+        border-radius: 100px;
+    }
+    
+    .cpu-selected {
+        transform: translateX(-40px);
+    }
+    
+    .score{
+        font-size:1.2rem;
+        margin-top:3rem;
+    }
+    
+    }
+
+  
+
+
+    }
+
